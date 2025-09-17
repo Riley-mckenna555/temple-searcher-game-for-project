@@ -1,4 +1,6 @@
-﻿Console.WriteLine("you sit on a warm winters night, you are in your armchair all comfy by the fire. when suddenly you get interuppted by your phone ringing. who is it now, you think to yourself as you ponder even bothering picking it up");
+﻿using System.Diagnostics.CodeAnalysis;
+
+Console.WriteLine("you sit on a warm winters night, you are in your armchair all comfy by the fire. when suddenly you get interuppted by your phone ringing. who is it now, you think to yourself as you ponder even bothering picking it up");
 Console.WriteLine("");
 Console.WriteLine("option 1. pick up the phone");
 Console.WriteLine("option 2. ignore the phone");
@@ -93,9 +95,207 @@ else if (input4 == "look around the entrance")
     Console.WriteLine("");
     Console.WriteLine("you dig in the rubble and you find 16 gold coins that are weirdly shaped kind of like triangles");
     Console.WriteLine("");
+    int gold = 0;
+    gold = gold + 16;
+    Console.WriteLine($" you now have {gold} gold coins");
+    Console.WriteLine("");
     Console.WriteLine("you walk back over to the door feeling proud of yourself that you found something");
     Console.WriteLine("");
     Console.WriteLine("you try to pry open the rusted over massive door, it creaks and breaks open as you fall down deep into the temple, no way back now");
 
+}
+Console.WriteLine("");
+Console.WriteLine("you hit the floor hard, you feel a sharp pain in your leg");
+Console.WriteLine("");
+Console.WriteLine("OH NO! you lost some health!");
+
+int health = 100;
+health = health - 20;
+Console.WriteLine($" your health is now {health}");
+Console.WriteLine("");
+
+Console.WriteLine("do you want to use the bandage you found in your car?");
+Console.WriteLine("");
+Console.WriteLine("option 1. yes");
+Console.WriteLine("option 2. no");
+Console.ReadLine();
+
+string input5 = Console.ReadLine();
+if (input5 == "yes")
+{
+    Console.WriteLine("you wrap the bandage around your leg, you gain back 20 health");
+    health = health + 20;
+    Console.WriteLine($" your health is now {health}");
+}
+
+
+else if (input5 == "no")
+{
+    Console.WriteLine("you deside not to use the bandage, yet and put it back in your bag");
+}
+
+
+Console.WriteLine("you walk down the dark path in the temple, you dont see anything but darkness");
+Console.WriteLine("");
+Console.WriteLine("option 1. use your flashlight");
+Console.WriteLine("option 2. keep walking in the dark");
+Console.ReadLine();
+string input6 = Console.ReadLine();
+
+if ( input6 == "use your flashlight")
+{
+    Console.WriteLine("the room gets illuminated, you look around and find some writing on tiles as well as drips of red on the ground");
+    Console.WriteLine("");
+    Console.WriteLine("your eyes widen as you see more and more of these drips of a blackish red fluid");
+    Console.WriteLine("");
+    Console.WriteLine("you raise your flashlight, and what you see stops your heart for a moment");
+    Console.WriteLine("");
+    Console.WriteLine("there is a puddle of red as you get closer you see its blood");
+    Console.WriteLine("");
+    Console.WriteLine("your eyes widen even more as you see the dismembered parts of the workers you were sent to retrieve");
+    Console.WriteLine("");
+    Console.WriteLine("you recoil in horror as you see one of the workers headless body");
+    Console.WriteLine("");
+    Console.WriteLine("you hear a bone crunching noise");
+    Console.WriteLine("");
+    Console.WriteLine("option 1. turn around");
+    Console.WriteLine("option 2. run into the darkness");
+    string input7 = Console.ReadLine();
+
+    if (input7 == "turn around")
+    {
+        Console.WriteLine("you turn around and lift your flashlight up");
+        Console.WriteLine("");
+        Console.WriteLine("your eyes shrink with fear as you see a massive creature, it has souless eyes and sharp teeth, with a mouth that extends");
+        Console.WriteLine("");
+        Console.WriteLine("you move away slowly as the creatures dead eyes look at you, it stares dead into your soul");
+        Console.WriteLine("");
+        Console.WriteLine("you sprint away running as fast as you can as it chases you with its arms that appear out of every place in its body");
+        Console.WriteLine("");
+
+    }
+
+    else if (input7 == "run into the darkness")
+    {
+        Console.WriteLine("");
+        Console.WriteLine("you sprint away running as fast as you can as it chases you with its arms that appear out of every place in its body");
+        Console.WriteLine("");
+    }
+
+    Console.WriteLine("you hear its roar as it sounds like the mimiced voices of all the dead workers combining into a skin crawling scream");
+    Console.WriteLine("");
+    Console.WriteLine("you keep running dodging objects");
+    Console.WriteLine("");
+    Console.WriteLine("option 1. go right, the way looks clear but suspicious");
+    Console.WriteLine("");
+    Console.WriteLine("option 2. go left, the way looks like it has rubble but it looks safer somehow");
+
+    string input8 = Console.ReadLine();
+
+    if (input8 == "go right, the way looks clear but suspicious")
+    {
+        Console.WriteLine("you turn the corner on the right side and see a dead end");
+        Console.WriteLine("");
+        Console.WriteLine("the monster screams and swings its arm, you dodge but get hit bluntly to the left way");
+        health = health - 50; 
+        Console.WriteLine($"your health is now {health}");
+        Console.WriteLine("");
+        Console.WriteLine("you are extremely hurt but push on as you sprint down the left path");
+    }
+
+    else if (input8 == "go left, the way looks like it has rubble but it looks safer somehow")
+    {
+        Console.WriteLine("you turn the corner on the left side and see a path that looks like it has lots and lots of rubble,but its not bad and treversable");
+        Console.WriteLine("");
+        Console.WriteLine("you see a light at the end of the tunnel");
+        Console.WriteLine("");
+        Console.WriteLine("the creature roars behind you, but you pay it no heed as you sprint towards the light at the end of the tunnel");
+        Console.WriteLine("");
+        Console.WriteLine("you make it to a sunlit area of the temple as the monster still chases you");
+        Console.WriteLine("");
+        Console.WriteLine("you see a big sharp object in the middle of the area, maybe you can stab it if you make the right maneuver");
+        Console.WriteLine("");
+        Console.WriteLine("the creature swings its massive hand");
+        Console.WriteLine("");
+        Console.WriteLine("option 1. dodge left");
+        Console.WriteLine("option 2. roll under it");
+
+        
+    }
+    
+    Console.WriteLine("you see a big sharp object in the middle of the area, maybe you can stab it if you make the right maneuver");
+    Console.WriteLine("");
+    Console.WriteLine("the creature swings its massive hand");
+    Console.WriteLine("");
+    Console.WriteLine("option 1. dodge left");
+    Console.WriteLine("option 2. roll under it");
+    string input9 = Console.ReadLine();
+
+    if (input9 == "dodge left")
+    {
+        Console.WriteLine("you swiftly dodge left just as the creature swings its massive hand");
+        Console.WriteLine("");
+        Console.WriteLine("the creatures massive hand makes it lose balance from how heavy it is, as the creature falls and gets impailed by the spike");
+        Console.WriteLine("");
+        Console.WriteLine("the creature bleeds out and dies");
+        Console.WriteLine("");
+        Console.WriteLine("with your job all done and years of trauma under your belt, you climb back up from the depths of the temple");
+        Console.WriteLine("");
+        Console.WriteLine("help arrives and brings you to the hospital and therapy after");
+        Console.WriteLine("");
+        Console.WriteLine("you never talk about what happened at that temple again");
+        Console.WriteLine("");
+        Console.WriteLine("The End");
+    }
+    else if (input9 == "roll under it")
+    {
+        Console.WriteLine("what did you think this was elden ring?");
+        Console.WriteLine("");
+        Console.WriteLine("you get crushed by the creatures body and bleed out");
+        int health2 = 0;
+        Console.WriteLine($"your health is now {health2}");
+        Console.WriteLine("");
+        Console.WriteLine("you died");
+        Console.WriteLine("");
+        Console.WriteLine("restart?");
+        Console.WriteLine("yes");
+        string restart2 = Console.ReadLine();
+        if (restart2 == "yes")
+        {
+            Console.Clear();
+            Program main = new Program();
+        }
+
+    }
+}
+
+else if (input6 == "keep walking in the dark")
+{
+    Console.WriteLine("you keep walking in the dark as you feel a slosh under your foot");
+    Console.WriteLine("");
+    Console.WriteLine("you bend over as you feel some of the fluid under your foot and raise it to your head");
+    Console.WriteLine("");
+    Console.WriteLine("your eyes widen as you see a blackish red fluid all over your hand");
+    Console.WriteLine("");
+    Console.WriteLine("as you walk your eyes adjust to the dark and your foot bumps something solid but kinda squishy");
+    Console.WriteLine("");
+    Console.WriteLine("you look down and see the traumatic scene of all your coworkers dismembered all over the place");
+    Console.WriteLine("");
+    Console.WriteLine("suddenly you feel a sharp pain in your chest as you fall down sucumbing to your wound and sink into the dark abyss of the afterlife");
+    int health2 = 0;
+    Console.WriteLine($"your health is now {health2}");
+    Console.WriteLine("");
+    Console.WriteLine("you died");
+    Console.WriteLine("");
+    Console.WriteLine("restart?");
+    Console.WriteLine("yes");
+    
+    string restart2 = Console.ReadLine();
+    if (restart2 == "yes")
+    {
+        Console.Clear();
+        Program main = new Program();
+
+    }
 }
 
