@@ -45,7 +45,25 @@ if (input2 == "ok, sounds good")
 {
     Console.WriteLine("perfect, now get going. we need those workers back immediately");
     Console.WriteLine("");
-    Console.WriteLine("you arrive at the temple, and step out from your automobile the chilling winter air prickles at your nose as you look up and around at the temple. it is huge! and full of arcitectural details that amazes you");
+    Console.WriteLine("you get in your car and turn it on, you drive through the snowy roads");
+    Console.WriteLine("");
+    Console.WriteLine("you are driving, how fast do you want to go?");
+    int speed = int.Parse(Console.ReadLine());
+
+    if (speed > 60)
+    {
+        Console.WriteLine("the police pull you over, and give you a 30 dollar fine");
+        int money = 100;
+        money = money - 30;
+        Console.WriteLine($"you now have {money} dollars");
+        Console.WriteLine("you keep driving after paying the fine");
+        Console.WriteLine("you arrive at the temple safely");
+    }
+    else
+    {
+        Console.WriteLine("you arrive at the temple safely");
+    }
+        Console.WriteLine("you step out from your automobile the chilling winter air prickles at your nose as you look up and around at the temple. it is huge! and full of arcitectural details that amazes you");
 }
 
 else if (input2 == "no why do i have to?")
