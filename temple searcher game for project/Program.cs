@@ -1,13 +1,16 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System.ComponentModel.Design;
+using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Metrics;
 
 Console.WriteLine("you sit on a warm winters night, you are in your armchair all comfy by the fire. when suddenly you get interuppted by your phone ringing. who is it now, you think to yourself as you ponder even bothering picking it up");
 Console.WriteLine("");
 Console.WriteLine("option 1. pick up the phone");
 Console.WriteLine("option 2. ignore the phone");
 Console.WriteLine("");
-string input = Console.ReadLine();
+string phoneChoice = Console.ReadLine();
+bool validPhoneChoice = phoneChoice == "pick up the phone" || phoneChoice == "ignore the phone";
 
-if (input == "pick up the phone")
+if (phoneChoice == "pick up the phone")
 {
     Console.WriteLine("you pick up the phone and hear the voice of your buisness partner, he sounds frantic and also a little excited. 'hey harold! its Raymond, sorry to bother you at this ungodly hour, i have good and bad news to tell you' you think to yourself about what he might want calling at this hour on a day before christmas eve. Raymond speaks again, 'ill start with the good news my friend, we found it!' you wonder what he might be talking about. 'we found the south arocalonian temple!' your eyes widen.");
     Console.WriteLine("");
@@ -15,15 +18,26 @@ if (input == "pick up the phone")
 
 }
 
-else if (input == "ignore the phone")
+else if (phoneChoice == "ignore the phone")
 {
     Console.WriteLine("you ignore the phone and go to sleep, the next day you find yourself jobless and a few months later you come to pass that your life is over, you shouldve picked up the phone you think to yourself");
     Console.WriteLine("");
     Console.WriteLine("restart?");
 }
 
-
-string restart = Console.ReadLine();
+else if (validPhoneChoice == true)
+{
+    Console.WriteLine("invalid input, please type the options exactly as they are shown");
+    Console.WriteLine("restart?");
+    
+     string restart2 = "yes";
+    if (restart2 == "yes")
+    {
+        Console.Clear();
+        Program main = new Program();
+    }
+}
+    string restart = Console.ReadLine();
 
 if (restart == "yes")
 {
@@ -39,9 +53,12 @@ Console.WriteLine("");
 Console.WriteLine("option 1. ok, sounds good");
 Console.WriteLine("option 2. no why do i have to?");
 
-string input2 = Console.ReadLine();
 
-if (input2 == "ok, sounds good")
+
+string agreeDisagree = Console.ReadLine();
+bool validAgreeDisagree = agreeDisagree == "ok, sounds good" || agreeDisagree == "no why do i have to?";
+
+if (agreeDisagree == "ok, sounds good")
 {
     Console.WriteLine("perfect, now get going. we need those workers back immediately");
     Console.WriteLine("");
@@ -49,6 +66,19 @@ if (input2 == "ok, sounds good")
     Console.WriteLine("");
     Console.WriteLine("you are driving, how fast do you want to go?");
     int speed = int.Parse(Console.ReadLine());
+
+    if (validAgreeDisagree == true)
+    {
+        Console.WriteLine("invalid input, please type the options exactly as they are shown");
+        Console.WriteLine("restart?");
+
+        string restart2 = "yes";
+        if (restart2 == "yes")
+        {
+            Console.Clear();
+            Program main = new Program();
+        }
+    }
 
     if (speed > 60)
     {
@@ -64,9 +94,10 @@ if (input2 == "ok, sounds good")
         Console.WriteLine("you arrive at the temple safely");
     }
         Console.WriteLine("you step out from your automobile the chilling winter air prickles at your nose as you look up and around at the temple. it is huge! and full of arcitectural details that amazes you");
+
 }
 
-else if (input2 == "no why do i have to?")
+else if (agreeDisagree == "no why do i have to?")
 {
     Console.WriteLine("Raymond sighs, 'look harold, i know this is a lot to ask but we really need those workers back, and you do want to keep your job right?. so do this favor for the company because i would really hate to fire you harold. so unless you want to be fired i would do what im asking you");
     Console.WriteLine("");
@@ -77,9 +108,12 @@ Console.WriteLine("");
 Console.WriteLine("option 1. enter the temple");
 Console.WriteLine("option 2. gather your gear");
 
-string input3 = Console.ReadLine();
 
-if (input3 == "enter the temple")
+
+string enterChoice = Console.ReadLine();
+bool validEnterChoice = enterChoice == "enter the temple" || enterChoice == "gather your gear";
+
+if (enterChoice == "enter the temple")
 {
     Console.WriteLine("i should gather my gear first you think to yourself, as you turn around and head back to your car");
     Console.WriteLine("");
@@ -88,8 +122,20 @@ if (input3 == "enter the temple")
     Console.WriteLine("you find a flashlight, a rope , and one bandage");
 
 }
+if (validEnterChoice == true)
+{
+    Console.WriteLine("invalid input, please type the options exactly as they are shown");
+    Console.WriteLine("restart?");
 
-else if (input3 == "gather your gear")
+    string restart2 = "yes";
+    if (restart2 == "yes")
+    {
+        Console.Clear();
+        Program main = new Program();
+    }
+}
+
+else if (enterChoice == "gather your gear")
 {
     Console.WriteLine("you search your car for gear");
     Console.WriteLine("you find a flashlight, a rope , and one bandage");
@@ -99,15 +145,32 @@ Console.WriteLine("you walk up to the entrance of the temple, there are some big
 Console.WriteLine("");
 Console.WriteLine("option 1. go in the big rustic looking door");
 Console.WriteLine("option 2. look around the entrance");
-string input4 = Console.ReadLine();
 
-if (input4 == "go in the big rustic looking door")
+
+
+string atTheEntrance = Console.ReadLine();
+bool validAtTheEntrance = atTheEntrance == "go in the big rustic looking door" || atTheEntrance == "look around the entrance";
+
+if (atTheEntrance == "go in the big rustic looking door")
 {
     Console.WriteLine("you try to pry open the rusted over massive door, it creaks and breaks open as you fall down deep into the temple, no way back now");
 
 }
 
-else if (input4 == "look around the entrance")
+if (validAtTheEntrance == true)
+{
+    Console.WriteLine("invalid input, please type the options exactly as they are shown");
+    Console.WriteLine("restart?");
+
+    string restart2 = "yes";
+    if (restart2 == "yes")
+    {
+        Console.Clear();
+        Program main = new Program();
+    }
+}
+
+else if (atTheEntrance == "look around the entrance")
 {
     Console.WriteLine("you look around the walls and floor of the entrance, you see a massive pile of rubble and you see a glint of something shiny inside it");
     Console.WriteLine("");
@@ -136,18 +199,33 @@ Console.WriteLine("do you want to use the bandage you found in your car?");
 Console.WriteLine("");
 Console.WriteLine("option 1. yes");
 Console.WriteLine("option 2. no");
+
+
 Console.ReadLine();
 
-string input5 = Console.ReadLine();
-if (input5 == "yes")
+string yesNoBandage = Console.ReadLine();
+bool validYesNoBandage = yesNoBandage == "yes" || yesNoBandage == "no";
+if (yesNoBandage == "yes")
 {
     Console.WriteLine("you wrap the bandage around your leg, you gain back 20 health");
     health = health + 20;
     Console.WriteLine($" your health is now {health}");
 }
 
+if (validYesNoBandage == true)
+{
+    Console.WriteLine("invalid input, please type the options exactly as they are shown");
+    Console.WriteLine("restart?");
 
-else if (input5 == "no")
+    string restart2 = "yes";
+    if (restart2 == "yes")
+    {
+        Console.Clear();
+        Program main = new Program();
+    }
+}
+
+else if (yesNoBandage == "no")
 {
     Console.WriteLine("you deside not to use the bandage, yet and put it back in your bag");
 }
@@ -157,10 +235,13 @@ Console.WriteLine("you walk down the dark path in the temple, you dont see anyth
 Console.WriteLine("");
 Console.WriteLine("option 1. use your flashlight");
 Console.WriteLine("option 2. keep walking in the dark");
-Console.ReadLine();
-string input6 = Console.ReadLine();
 
-if ( input6 == "use your flashlight")
+
+Console.ReadLine();
+string flashLight = Console.ReadLine();
+bool validFlashLight = flashLight == "use your flashlight" || flashLight == "keep walking in the dark";
+
+if (flashLight == "use your flashlight")
 {
     Console.WriteLine("the room gets illuminated, you look around and find some writing on tiles as well as drips of red on the ground");
     Console.WriteLine("");
@@ -178,9 +259,25 @@ if ( input6 == "use your flashlight")
     Console.WriteLine("");
     Console.WriteLine("option 1. turn around");
     Console.WriteLine("option 2. run into the darkness");
-    string input7 = Console.ReadLine();
 
-    if (input7 == "turn around")
+    if (validFlashLight == true)
+    {
+        Console.WriteLine("invalid input, please type the options exactly as they are shown");
+        Console.WriteLine("restart?");
+
+        string restart2 = "yes";
+        if (restart2 == "yes")
+        {
+            Console.Clear();
+            Program main = new Program();
+        }
+    }
+
+
+    string turnAround = Console.ReadLine();
+    bool validTurnAround = turnAround == "turn around" || turnAround == "run into the darkness";
+
+    if (turnAround == "turn around")
     {
         Console.WriteLine("you turn around and lift your flashlight up");
         Console.WriteLine("");
@@ -193,7 +290,20 @@ if ( input6 == "use your flashlight")
 
     }
 
-    else if (input7 == "run into the darkness")
+    if (validTurnAround == true)
+    {
+        Console.WriteLine("invalid input, please type the options exactly as they are shown");
+        Console.WriteLine("restart?");
+
+        string restart2 = "yes";
+        if (restart2 == "yes")
+        {
+            Console.Clear();
+            Program main = new Program();
+        }
+    }
+
+    else if (turnAround == "run into the darkness")
     {
         Console.WriteLine("");
         Console.WriteLine("you sprint away running as fast as you can as it chases you with its arms that appear out of every place in its body");
@@ -207,10 +317,12 @@ if ( input6 == "use your flashlight")
     Console.WriteLine("option 1. go right, the way looks clear but suspicious");
     Console.WriteLine("");
     Console.WriteLine("option 2. go left, the way looks like it has rubble but it looks safer somehow");
+   
 
-    string input8 = Console.ReadLine();
 
-    if (input8 == "go right, the way looks clear but suspicious")
+    string chooseWhichWay = Console.ReadLine();
+    bool validChooseWhichWay = chooseWhichWay == "go right, the way looks clear but suspicious" || chooseWhichWay == "go left, the way looks like it has rubble but it looks safer somehow";
+    if (chooseWhichWay == "go right, the way looks clear but suspicious")
     {
         Console.WriteLine("you turn the corner on the right side and see a dead end");
         Console.WriteLine("");
@@ -221,7 +333,20 @@ if ( input6 == "use your flashlight")
         Console.WriteLine("you are extremely hurt but push on as you sprint down the left path");
     }
 
-    else if (input8 == "go left, the way looks like it has rubble but it looks safer somehow")
+    if (validChooseWhichWay == true)
+    {
+        Console.WriteLine("invalid input, please type the options exactly as they are shown");
+        Console.WriteLine("restart?");
+
+        string restart2 = "yes";
+        if (restart2 == "yes")
+        {
+            Console.Clear();
+            Program main = new Program();
+        }
+    }
+
+    else if (chooseWhichWay == "go left, the way looks like it has rubble but it looks safer somehow")
     {
         Console.WriteLine("you turn the corner on the left side and see a path that looks like it has lots and lots of rubble,but its not bad and treversable");
         Console.WriteLine("");
@@ -231,14 +356,10 @@ if ( input6 == "use your flashlight")
         Console.WriteLine("");
         Console.WriteLine("you make it to a sunlit area of the temple as the monster still chases you");
         Console.WriteLine("");
-        Console.WriteLine("you see a big sharp object in the middle of the area, maybe you can stab it if you make the right maneuver");
-        Console.WriteLine("");
-        Console.WriteLine("the creature swings its massive hand");
-        Console.WriteLine("");
-        Console.WriteLine("option 1. dodge left");
-        Console.WriteLine("option 2. roll under it");
-
         
+  
+
+
     }
     
     Console.WriteLine("you see a big sharp object in the middle of the area, maybe you can stab it if you make the right maneuver");
@@ -247,9 +368,11 @@ if ( input6 == "use your flashlight")
     Console.WriteLine("");
     Console.WriteLine("option 1. dodge left");
     Console.WriteLine("option 2. roll under it");
-    string input9 = Console.ReadLine();
+    
+    string dodgeWhichWay = Console.ReadLine();
+    bool validDodgeWhichWay = dodgeWhichWay == "dodge left" || dodgeWhichWay == "roll under it";
 
-    if (input9 == "dodge left")
+    if (dodgeWhichWay == "dodge left")
     {
         Console.WriteLine("you swiftly dodge left just as the creature swings its massive hand");
         Console.WriteLine("");
@@ -265,7 +388,20 @@ if ( input6 == "use your flashlight")
         Console.WriteLine("");
         Console.WriteLine("The End");
     }
-    else if (input9 == "roll under it")
+
+    if (validDodgeWhichWay == true)
+    {
+        Console.WriteLine("invalid input, please type the options exactly as they are shown");
+        Console.WriteLine("restart?");
+
+        string restart2 = "yes";
+        if (restart2 == "yes")
+        {
+            Console.Clear();
+            Program main = new Program();
+        }
+    }
+    else if (dodgeWhichWay == "roll under it")
     {
         Console.WriteLine("what did you think this was elden ring?");
         Console.WriteLine("");
@@ -287,7 +423,7 @@ if ( input6 == "use your flashlight")
     }
 }
 
-else if (input6 == "keep walking in the dark")
+else if (flashLight == "keep walking in the dark")
 {
     Console.WriteLine("you keep walking in the dark as you feel a slosh under your foot");
     Console.WriteLine("");
