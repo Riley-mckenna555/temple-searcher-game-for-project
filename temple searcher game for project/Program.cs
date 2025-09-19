@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.Design;
+﻿ using System.ComponentModel.Design;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Metrics;
 
@@ -6,7 +6,6 @@ Console.WriteLine("you sit on a warm winters night, you are in your armchair all
 Console.WriteLine("");
 Console.WriteLine("option 1. pick up the phone");
 Console.WriteLine("option 2. ignore the phone");
-Console.WriteLine("");
 string phoneChoice = Console.ReadLine();
 bool validPhoneChoice = phoneChoice == "pick up the phone" || phoneChoice == "ignore the phone";
 
@@ -15,9 +14,7 @@ if (phoneChoice == "pick up the phone")
     Console.WriteLine("you pick up the phone and hear the voice of your buisness partner, he sounds frantic and also a little excited. 'hey harold! its Raymond, sorry to bother you at this ungodly hour, i have good and bad news to tell you' you think to yourself about what he might want calling at this hour on a day before christmas eve. Raymond speaks again, 'ill start with the good news my friend, we found it!' you wonder what he might be talking about. 'we found the south arocalonian temple!' your eyes widen.");
     Console.WriteLine("");
     Console.WriteLine("Raymond continues, 'now for the more worrysome news, we kinda sorta sent some workers there to check on whats inside and they havent really come back yet which is kindof worrying, ok ok lets get down to brass tacs, we at raymonds exploration.inc would like for you to check it out for us and retrieve out lost workers.'");
-
 }
-
 else if (phoneChoice == "ignore the phone")
 {
     Console.WriteLine("you ignore the phone and go to sleep, the next day you find yourself jobless and a few months later you come to pass that your life is over, you shouldve picked up the phone you think to yourself");
@@ -25,16 +22,16 @@ else if (phoneChoice == "ignore the phone")
     Console.WriteLine("restart?");
 }
 
-else if (validPhoneChoice == true)
+else if (validPhoneChoice == false)
 {
-    Console.WriteLine("invalid input, please type the options exactly as they are shown");
+    Console.WriteLine($"invalid input, {phoneChoice} please type the options exactly as they are shown");
     Console.WriteLine("restart?");
-    
      string restart2 = "yes";
+    Console.ReadLine();
     if (restart2 == "yes")
     {
         Console.Clear();
-        Program main = new Program();
+        //Program main = new Program();
     }
 }
     string restart = Console.ReadLine();
@@ -42,19 +39,15 @@ else if (validPhoneChoice == true)
 if (restart == "yes")
 {
     Console.Clear();
-    Program main = new Program();
+    //Program main = new Program();
 
 
    
     
 
 }
-Console.WriteLine("");
 Console.WriteLine("option 1. ok, sounds good");
 Console.WriteLine("option 2. no why do i have to?");
-
-
-
 string agreeDisagree = Console.ReadLine();
 bool validAgreeDisagree = agreeDisagree == "ok, sounds good" || agreeDisagree == "no why do i have to?";
 
@@ -67,7 +60,7 @@ if (agreeDisagree == "ok, sounds good")
     Console.WriteLine("you are driving, how fast do you want to go?");
     int speed = int.Parse(Console.ReadLine());
 
-    if (validAgreeDisagree == true)
+    if (validAgreeDisagree == false)
     {
         Console.WriteLine("invalid input, please type the options exactly as they are shown");
         Console.WriteLine("restart?");
@@ -76,7 +69,7 @@ if (agreeDisagree == "ok, sounds good")
         if (restart2 == "yes")
         {
             Console.Clear();
-            Program main = new Program();
+           // Program main = new Program();
         }
     }
 
@@ -89,7 +82,7 @@ if (agreeDisagree == "ok, sounds good")
         Console.WriteLine("you keep driving after paying the fine");
         Console.WriteLine("you arrive at the temple safely");
     }
-    else
+    else 
     {
         Console.WriteLine("you arrive at the temple safely");
     }
@@ -122,18 +115,6 @@ if (enterChoice == "enter the temple")
     Console.WriteLine("you find a flashlight, a rope , and one bandage");
 
 }
-if (validEnterChoice == true)
-{
-    Console.WriteLine("invalid input, please type the options exactly as they are shown");
-    Console.WriteLine("restart?");
-
-    string restart2 = "yes";
-    if (restart2 == "yes")
-    {
-        Console.Clear();
-        Program main = new Program();
-    }
-}
 
 else if (enterChoice == "gather your gear")
 {
@@ -146,6 +127,19 @@ Console.WriteLine("");
 Console.WriteLine("option 1. go in the big rustic looking door");
 Console.WriteLine("option 2. look around the entrance");
 
+if (validEnterChoice == false)
+{
+    Console.WriteLine("invalid input, please type the options exactly as they are shown");
+    Console.WriteLine("restart?");
+    string enterChoice2 = Console.ReadLine();
+    string restart2 = "yes";
+    if (restart2 == "yes")
+    {
+        Console.Clear();
+        //Program main = new Program();
+    }
+}
+
 
 
 string atTheEntrance = Console.ReadLine();
@@ -157,16 +151,16 @@ if (atTheEntrance == "go in the big rustic looking door")
 
 }
 
-if (validAtTheEntrance == true)
+if (validAtTheEntrance == false)
 {
     Console.WriteLine("invalid input, please type the options exactly as they are shown");
     Console.WriteLine("restart?");
-
+    string atTheEntrance2 = Console.ReadLine();
     string restart2 = "yes";
     if (restart2 == "yes")
     {
         Console.Clear();
-        Program main = new Program();
+        //Program main = new Program();
     }
 }
 
@@ -212,16 +206,16 @@ if (yesNoBandage == "yes")
     Console.WriteLine($" your health is now {health}");
 }
 
-if (validYesNoBandage == true)
+if (validYesNoBandage == false)
 {
     Console.WriteLine("invalid input, please type the options exactly as they are shown");
     Console.WriteLine("restart?");
-
+    string yesNoBandage2 = Console.ReadLine();
     string restart2 = "yes";
     if (restart2 == "yes")
     {
         Console.Clear();
-        Program main = new Program();
+        //Program main = new Program();
     }
 }
 
@@ -260,16 +254,16 @@ if (flashLight == "use your flashlight")
     Console.WriteLine("option 1. turn around");
     Console.WriteLine("option 2. run into the darkness");
 
-    if (validFlashLight == true)
+    if (validFlashLight == false)
     {
         Console.WriteLine("invalid input, please type the options exactly as they are shown");
         Console.WriteLine("restart?");
-
+        string flashLight2 = Console.ReadLine();
         string restart2 = "yes";
         if (restart2 == "yes")
         {
             Console.Clear();
-            Program main = new Program();
+            //Program main = new Program();
         }
     }
 
@@ -290,16 +284,16 @@ if (flashLight == "use your flashlight")
 
     }
 
-    if (validTurnAround == true)
+    if (validTurnAround == false)
     {
         Console.WriteLine("invalid input, please type the options exactly as they are shown");
         Console.WriteLine("restart?");
-
+        string turnAround2 = Console.ReadLine();
         string restart2 = "yes";
         if (restart2 == "yes")
         {
             Console.Clear();
-            Program main = new Program();
+            //Program main = new Program();
         }
     }
 
@@ -333,16 +327,16 @@ if (flashLight == "use your flashlight")
         Console.WriteLine("you are extremely hurt but push on as you sprint down the left path");
     }
 
-    if (validChooseWhichWay == true)
+    if (validChooseWhichWay == false)
     {
         Console.WriteLine("invalid input, please type the options exactly as they are shown");
         Console.WriteLine("restart?");
-
+        string chooseWhichWay2 = Console.ReadLine();
         string restart2 = "yes";
         if (restart2 == "yes")
         {
             Console.Clear();
-            Program main = new Program();
+            //Program main = new Program();
         }
     }
 
@@ -389,16 +383,16 @@ if (flashLight == "use your flashlight")
         Console.WriteLine("The End");
     }
 
-    if (validDodgeWhichWay == true)
+    if (validDodgeWhichWay == false)
     {
         Console.WriteLine("invalid input, please type the options exactly as they are shown");
         Console.WriteLine("restart?");
-
+        string dodgeWhichWay2 = Console.ReadLine();
         string restart2 = "yes";
         if (restart2 == "yes")
         {
             Console.Clear();
-            Program main = new Program();
+            //Program main = new Program();
         }
     }
     else if (dodgeWhichWay == "roll under it")
@@ -413,11 +407,12 @@ if (flashLight == "use your flashlight")
         Console.WriteLine("");
         Console.WriteLine("restart?");
         Console.WriteLine("yes");
+        string dodgeWhichWay2 = Console.ReadLine();
         string restart2 = Console.ReadLine();
         if (restart2 == "yes")
         {
             Console.Clear();
-            Program main = new Program();
+            //Program main = new Program();
         }
 
     }
@@ -443,12 +438,12 @@ else if (flashLight == "keep walking in the dark")
     Console.WriteLine("");
     Console.WriteLine("restart?");
     Console.WriteLine("yes");
-    
+    string flashLight2 = Console.ReadLine();
     string restart2 = Console.ReadLine();
     if (restart2 == "yes")
     {
         Console.Clear();
-        Program main = new Program();
+        //Program main = new Program();
 
     }
 }
